@@ -38,7 +38,7 @@ todoApp.controllers = {
                               }
                           });
                   }
-                  else if (value != "Ice cream" || value != "ice cream") {
+                  else if (value == "Broccoli" || value == "broccoli") {
                           ons.notification.confirm({message: 'Would you like to add "Ice cream" to your list?'}).then(function(value){
                              if (value == 1) {
                                 todoApp.models.todo.add("Ice cream");
