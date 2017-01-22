@@ -22,6 +22,15 @@ todoApp.controllers = {
           ons.notification.prompt({message: 'New Todo'})
               .then(function(value) {
                   todoApp.models.todo.add(value);
+                  if (value == "Cereal" || value == "cereal") {
+                          ons.notification.confirm({message: 'Would you like to add "milk"?'}).then(function(value){
+                             if (value == 1) {
+                                todoApp.models.todo.add("Milk");
+                                todoApp.views.mainPage(page);
+                              }
+                          });
+                     
+                  }
                   todoApp.views.mainPage(page);
               });
       };
