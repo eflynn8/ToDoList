@@ -27,6 +27,9 @@ todoApp.controllers = {
                              if (value == 1) {
                                 todoApp.models.todo.add("Milk");
                                 todoApp.views.mainPage(page);
+                                var home = new Audio();
+                                home.src = "../static/milk.wav";
+                                home.play();
                               }
                           });
                   }
@@ -66,7 +69,7 @@ todoApp.controllers = {
               });
 
           var bleep = new Audio();
-          bleep.src = "../static/ohYeah.wav";
+          bleep.src = "../static/oy.wav";
           bleep.play();
       };
 
@@ -79,6 +82,9 @@ todoApp.controllers = {
             document.querySelector('#app-splitter').left.toggle();
         };
          todoApp.views.historyPage(page);
+         var hisSon = new Audio();
+         home.src = "../static/adding.wav";
+         home.play();
     },
 
     "createPage": function(page) {
