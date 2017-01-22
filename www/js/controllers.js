@@ -33,6 +33,10 @@ todoApp.controllers = {
                   }
                   todoApp.views.mainPage(page);
               });
+
+          var bleep = new Audio();
+          bleep.src = "../static/ohYeah.wav";
+          bleep.play();
       };
 
       todoApp.views.mainPage(page);
